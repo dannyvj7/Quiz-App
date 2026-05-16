@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #4f8ef7;
+  --blue-dim: #4f8ef715;
+  --bg: #07090f;
+  --surface: #0e1420;
+  --border: #1c2740;
+  --text: #e8edf8;
+  --muted: #4a5a7a;
+}
+
+body {
+  background-color: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+  color: var(--text);
+  padding: 20px;
+  background-image: radial-gradient(
+      ellipse at 0% 0%,
+      rgba(79, 142, 247, 0.06) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(79, 142, 247, 0.04) 0%,
+      transparent 60%
+    );
+}
+
+.container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 0 80px rgba(79, 142, 247, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+h1 span {
+  color: var(--blue);
+}
+
+#question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.6;
+  padding: 24px;
+  background: var(--blue-dim);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  min-height: 80px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#options button {
+  width: 100%;
+  padding: 14px 20px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+#options button:hover {
+  background: var(--blue-dim);
+  border-color: var(--blue);
+  color: var(--blue);
+  transform: translateX(4px);
+}
+
+#feedback {
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 24px;
+  color: var(--blue);
+  text-align: center;
+}
+
+#finalScore {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  padding: 20px;
+  background: var(--blue-dim);
+  border: 1px solid var(--blue);
+  border-radius: 12px;
+  display: none;
+}
+
+#finalScore button {
+  margin-top: 16px;
+  width: 100%;
+  padding: 14px;
+  background: var(--blue);
+  color: var(--bg);
+  border: none;
+  border-radius: 12px;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#finalScore button:hover {
+  background: #6ba3ff;
+}
+
+#finalScore button:active {
+  transform: scale(0.98);
+}
